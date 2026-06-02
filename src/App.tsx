@@ -7,10 +7,13 @@ import LearningDashboard from './pages/LearningDashboard'
 import MentorshipCommunity from './pages/MentorshipCommunity'
 import Checklist from './pages/Checklist'
 import Contact from './pages/Contact'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
+import { AuthProvider } from './context/AuthContext'
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <Navbar />
       <main style={{ flex: 1 }}>
         <Routes>
@@ -20,10 +23,12 @@ function App() {
           <Route path="/mentorship" element={<MentorshipCommunity />} />
           <Route path="/checklist" element={<Checklist />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </main>
       <Footer />
-    </>
+    </AuthProvider>
   )
 }
 
