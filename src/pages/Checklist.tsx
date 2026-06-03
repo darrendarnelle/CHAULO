@@ -2,18 +2,20 @@ import { useState } from 'react'
 import { Check, Circle, Plane, BookOpen, FileText, Home, DollarSign, Briefcase, CreditCard } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
-const initialItems = [
-  { id: 1, label: 'Passport ready', icon: <CreditCard size={18} />, checked: true },
-  { id: 2, label: 'Language preparation', icon: <BookOpen size={18} />, checked: true },
-  { id: 3, label: 'University/job applications', icon: <Briefcase size={18} />, checked: true },
-  { id: 4, label: 'Visa documents', icon: <FileText size={18} />, checked: true },
-  { id: 5, label: 'Housing research', icon: <Home size={18} />, checked: false },
-  { id: 6, label: 'Financial planning', icon: <DollarSign size={18} />, checked: false },
-  { id: 7, label: 'Departure preparation', icon: <Plane size={18} />, checked: false },
-]
-
 export default function Checklist() {
-  const [items, setItems] = useState(initialItems)
+  const { t } = useTranslation()
+
+  const getInitialItems = () => [
+    { id: 1, label: t('checklist.item1'), icon: <CreditCard size={18} />, checked: true },
+    { id: 2, label: t('checklist.item2'), icon: <BookOpen size={18} />, checked: true },
+    { id: 3, label: t('checklist.item3'), icon: <Briefcase size={18} />, checked: true },
+    { id: 4, label: t('checklist.item4'), icon: <FileText size={18} />, checked: true },
+    { id: 5, label: t('checklist.item5'), icon: <Home size={18} />, checked: false },
+    { id: 6, label: t('checklist.item6'), icon: <DollarSign size={18} />, checked: false },
+    { id: 7, label: t('checklist.item7'), icon: <Plane size={18} />, checked: false },
+  ]
+
+  const [items, setItems] = useState(getInitialItems())
 
   const toggle = (id: number) => {
     setItems((prev) =>
@@ -25,8 +27,6 @@ export default function Checklist() {
 
   const checkedCount = items.filter((i) => i.checked).length
   const percent = Math.round((checkedCount / items.length) * 100)
-
-  const { t } = useTranslation()
 
   return (
     <div>

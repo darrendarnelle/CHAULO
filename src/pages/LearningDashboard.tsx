@@ -1,59 +1,60 @@
 import { ArrowRight, BookOpen, FileText, DollarSign, Briefcase, Globe, Home } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
-const modules = [
-  {
-    title: 'Choosing Your Destination',
-    desc: 'Compare countries, programs, and opportunities to find your best fit.',
-    icon: <Globe size={22} />,
-    progress: 80,
-    color: 'var(--primary-500)',
-    bg: 'var(--primary-50)',
-  },
-  {
-    title: 'Visa & Documents',
-    desc: 'Understand visa requirements and prepare all necessary documents.',
-    icon: <FileText size={22} />,
-    progress: 45,
-    color: 'var(--accent-500)',
-    bg: 'var(--accent-50)',
-  },
-  {
-    title: 'Scholarships & Funding',
-    desc: 'Find and apply for scholarships, grants, and financial aid.',
-    icon: <DollarSign size={22} />,
-    progress: 30,
-    color: 'var(--warning-500)',
-    bg: 'var(--warning-50)',
-  },
-  {
-    title: 'Work Opportunities',
-    desc: 'Explore part-time work, internships, and post-graduation career paths.',
-    icon: <Briefcase size={22} />,
-    progress: 15,
-    color: 'var(--error-500)',
-    bg: 'var(--error-50)',
-  },
-  {
-    title: 'Cultural Adaptation',
-    desc: 'Prepare for cultural differences and build cross-cultural skills.',
-    icon: <BookOpen size={22} />,
-    progress: 0,
-    color: 'var(--primary-600)',
-    bg: 'var(--primary-50)',
-  },
-  {
-    title: 'Life Preparation Abroad',
-    desc: 'Housing, health, transportation, and daily life essentials.',
-    icon: <Home size={22} />,
-    progress: 0,
-    color: 'var(--neutral-500)',
-    bg: 'var(--neutral-100)',
-  },
-]
-
 export default function LearningDashboard() {
   const { t } = useTranslation()
+
+  const modules = [
+    {
+      title: t('dashboard.module1'),
+      desc: t('dashboard.module1Desc'),
+      icon: <Globe size={22} />,
+      progress: 80,
+      color: 'var(--primary-500)',
+      bg: 'var(--primary-50)',
+    },
+    {
+      title: t('dashboard.module2'),
+      desc: t('dashboard.module2Desc'),
+      icon: <FileText size={22} />,
+      progress: 45,
+      color: 'var(--accent-500)',
+      bg: 'var(--accent-50)',
+    },
+    {
+      title: t('dashboard.module6'),
+      desc: t('dashboard.module6Desc'),
+      icon: <DollarSign size={22} />,
+      progress: 30,
+      color: 'var(--warning-500)',
+      bg: 'var(--warning-50)',
+    },
+    {
+      title: t('dashboard.module5'),
+      desc: t('dashboard.module5Desc'),
+      icon: <Briefcase size={22} />,
+      progress: 15,
+      color: 'var(--error-500)',
+      bg: 'var(--error-50)',
+    },
+    {
+      title: t('dashboard.module7'),
+      desc: t('dashboard.module7Desc'),
+      icon: <BookOpen size={22} />,
+      progress: 0,
+      color: 'var(--primary-600)',
+      bg: 'var(--primary-50)',
+    },
+    {
+      title: t('dashboard.module8'),
+      desc: t('dashboard.module8Desc'),
+      icon: <Home size={22} />,
+      progress: 0,
+      color: 'var(--neutral-500)',
+      bg: 'var(--neutral-100)',
+    },
+  ]
+
   const overallProgress = Math.round(
     modules.reduce((sum, m) => sum + m.progress, 0) / modules.length
   )

@@ -2,74 +2,77 @@ import { useState } from 'react'
 import { Calendar, MessageCircle, Send, User } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
-const mentors = [
-  {
-    name: 'Rina Wijaya',
-    role: 'Masters Student at University of Melbourne',
-    country: 'Australia',
-    intro: 'Helped 20+ students navigate Australian university applications and scholarships.',
-    color: 'var(--primary-500)',
-  },
-  {
-    name: 'Budi Santoso',
-    role: 'Software Engineer at a Taipei Tech Company',
-    country: 'Taiwan',
-    intro: 'Went through the Taiwan talent program and can guide you through the process.',
-    color: 'var(--accent-500)',
-  },
-  {
-    name: 'Siti Aisyah',
-    role: 'Finance Professional in Singapore',
-    country: 'Singapore',
-    intro: 'From Jakarta to NUS to a career in Singapore finance. Ask me anything!',
-    color: 'var(--warning-500)',
-  },
-  {
-    name: 'Andi Pratama',
-    role: 'Data Analyst in Toronto',
-    country: 'Canada',
-    intro: 'Navigated the study-to-PR pathway in Canada. Happy to share my experience.',
-    color: 'var(--error-500)',
-  },
-  {
-    name: 'Dewi Lestari',
-    role: 'PhD Researcher at Monash University Malaysia',
-    country: 'Malaysia',
-    intro: 'Affordable quality education in Malaysia - I can show you how it works.',
-    color: 'var(--primary-600)',
-  },
-  {
-    name: 'Fajar Nugroho',
-    role: 'Product Designer in Sydney',
-    country: 'Australia',
-    intro: 'From Bandung to Sydney - I know the creative industry landscape in Australia.',
-    color: 'var(--primary-400)',
-  },
-]
-
-const initialPosts = [
-  {
-    author: 'Maya S.',
-    time: '2 hours ago',
-    text: 'Just got accepted into a university in Taiwan! Anyone else going this fall?',
-    replies: 5,
-  },
-  {
-    author: 'Rizky A.',
-    time: '5 hours ago',
-    text: 'What documents do I need for the Australia student visa? The checklist on Chaulo helped a lot but I want to double-check.',
-    replies: 8,
-  },
-  {
-    author: 'Putri D.',
-    time: '1 day ago',
-    text: 'Sharing my experience: I got a full scholarship to NUS Singapore. Happy to answer questions about the application process!',
-    replies: 12,
-  },
-]
-
 export default function MentorshipCommunity() {
   const { t } = useTranslation()
+
+  const getMentors = () => [
+    {
+      name: t('mentorship.mentor1'),
+      role: t('mentorship.mentor1Role'),
+      country: t('mentorship.mentor1Country'),
+      intro: t('mentorship.mentor1Intro'),
+      color: 'var(--primary-500)',
+    },
+    {
+      name: t('mentorship.mentor2'),
+      role: t('mentorship.mentor2Role'),
+      country: t('mentorship.mentor2Country'),
+      intro: t('mentorship.mentor2Intro'),
+      color: 'var(--accent-500)',
+    },
+    {
+      name: t('mentorship.mentor3'),
+      role: t('mentorship.mentor3Role'),
+      country: t('mentorship.mentor3Country'),
+      intro: t('mentorship.mentor3Intro'),
+      color: 'var(--warning-500)',
+    },
+    {
+      name: t('mentorship.mentor4'),
+      role: t('mentorship.mentor4Role'),
+      country: t('mentorship.mentor4Country'),
+      intro: t('mentorship.mentor4Intro'),
+      color: 'var(--error-500)',
+    },
+    {
+      name: t('mentorship.mentor5'),
+      role: t('mentorship.mentor5Role'),
+      country: t('mentorship.mentor5Country'),
+      intro: t('mentorship.mentor5Intro'),
+      color: 'var(--primary-600)',
+    },
+    {
+      name: t('mentorship.mentor6'),
+      role: t('mentorship.mentor6Role'),
+      country: t('mentorship.mentor6Country'),
+      intro: t('mentorship.mentor6Intro'),
+      color: 'var(--primary-400)',
+    },
+  ]
+
+  const mentors = getMentors()
+
+  const initialPosts = [
+    {
+      author: 'Maya S.',
+      time: '2 hours ago',
+      text: 'Just got accepted into a university in Taiwan! Anyone else going this fall?',
+      replies: 5,
+    },
+    {
+      author: 'Rizky A.',
+      time: '5 hours ago',
+      text: 'What documents do I need for the Australia student visa? The checklist on Chaulo helped a lot but I want to double-check.',
+      replies: 8,
+    },
+    {
+      author: 'Putri D.',
+      time: '1 day ago',
+      text: 'Sharing my experience: I got a full scholarship to NUS Singapore. Happy to answer questions about the application process!',
+      replies: 12,
+    },
+  ]
+
   const [posts, setPosts] = useState(initialPosts)
   const [newPost, setNewPost] = useState('')
 
