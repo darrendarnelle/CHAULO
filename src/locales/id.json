@@ -1,15 +1,4 @@
 {
-  "nav": {
-    "home": "Beranda",
-    "explore": "Jelajahi",
-    "dashboard": "Dasbor",
-    "mentorship": "Mentorship",
-    "checklist": "Daftar Periksa",
-    "contact": "Kontak",
-    "signIn": "Masuk",
-    "signUp": "Daftar",
-    "signOut": "Keluar"
-  },
   "home": {
     "title": "Rencanakan Karir Pendidikan Internasional Anda",
     "subtitle": "Bimbingan profesional untuk pendidikan lanjutan di luar negeri",
@@ -31,45 +20,25 @@
     "reason4Desc": "Terhubung dengan sesama siswa yang mengejar peluang pendidikan internasional"
   },
   "explore": {
-    "title": "Jelajahi Negara",
-    "description": "Temukan destinasi studi populer di seluruh dunia",
-    "visitBtn": "Pelajari Lebih Lanjut",
-    "country": "Negara",
-    "university": "Universitas",
-    "tuition": "Biaya Kuliah",
-    "livingCost": "Biaya Hidup"
+    "title": "Explore Countries",
+    "subtitle": "Temukan peluang studi dan kerja di seluruh dunia. Setiap negara memiliki jalur unik yang menanti Anda.",
+    "visitBtn": "Pelajari Lebih Lanjut"
   },
   "dashboard": {
-    "title": "Dasbor Pembelajaran",
-    "subtitle": "Lacak kemajuan persiapan Anda",
-    "english": "Bahasa Inggris",
-    "englishLevel": "Level",
-    "standardized": "Tes Standar",
-    "score": "Skor",
-    "applications": "Aplikasi",
-    "applicationStatus": "Status"
+    "title": "Learning Dashboard",
+    "subtitle": "Lacak kemajuan persiapan Anda untuk studi internasional"
   },
   "mentorship": {
-    "title": "Mentorship & Komunitas",
-    "subtitle": "Terhubung dengan mentor berpengalaman",
-    "connectBtn": "Terhubung",
-    "mentors": "Mentor Tersedia",
-    "expertise": "Keahlian",
-    "contact": "Hubungi"
+    "title": "Mentorship & Community",
+    "subtitle": "Pelajari dari mereka yang telah menempuh jalan ini. Terhubung dengan mentor dan sesama siswa yang mempersiapkan peluang global."
   },
   "checklist": {
-    "title": "Daftar Periksa Pribadi",
-    "subtitle": "Atur tugas-tugas persiapan Anda",
-    "addPlaceholder": "Tambahkan tugas baru...",
-    "addBtn": "Tambahkan",
-    "tasks": "Tugas-Tugas Anda",
-    "noTasks": "Belum ada tugas. Mulai rencanakan perjalanan Anda!",
-    "completed": "Selesai",
-    "pending": "Tertunda"
+    "title": "Personal Checklist",
+    "subtitle": "Lacak kemajuan persiapan Anda dan pastikan tidak ada yang terlewatkan sebelum Anda pergi ke luar negeri."
   },
   "contact": {
     "title": "Hubungi Kami",
-    "subtitle": "Ada pertanyaan? Hubungi kami untuk konsultasi",
+    "subtitle": "Pesan konsultasi gratis dengan tim kami untuk membahas rencana Anda untuk belajar atau bekerja di luar negeri.",
     "name": "Nama Lengkap",
     "email": "Email",
     "message": "Pesan",

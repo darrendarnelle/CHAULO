@@ -1,15 +1,4 @@
 {
-  "nav": {
-    "home": "Home",
-    "explore": "Explore",
-    "dashboard": "Dashboard",
-    "mentorship": "Mentorship",
-    "checklist": "Checklist",
-    "contact": "Contact",
-    "signIn": "Sign In",
-    "signUp": "Sign Up",
-    "signOut": "Sign Out"
-  },
   "home": {
     "title": "Plan Your International Education Journey",
     "subtitle": "Professional guidance for studying abroad",
@@ -32,44 +21,24 @@
   },
   "explore": {
     "title": "Explore Countries",
-    "description": "Discover popular study destinations around the world",
-    "visitBtn": "Learn More",
-    "country": "Country",
-    "university": "University",
-    "tuition": "Tuition",
-    "livingCost": "Living Cost"
+    "subtitle": "Discover study and work opportunities across the world. Each country has unique pathways waiting for you.",
+    "visitBtn": "Learn More"
   },
   "dashboard": {
     "title": "Learning Dashboard",
-    "subtitle": "Track your preparation progress",
-    "english": "English",
-    "englishLevel": "Level",
-    "standardized": "Standardized Tests",
-    "score": "Score",
-    "applications": "Applications",
-    "applicationStatus": "Status"
+    "subtitle": "Track your preparation progress for international studies"
   },
   "mentorship": {
     "title": "Mentorship & Community",
-    "subtitle": "Connect with experienced mentors",
-    "connectBtn": "Connect",
-    "mentors": "Available Mentors",
-    "expertise": "Expertise",
-    "contact": "Contact"
+    "subtitle": "Learn from those who have walked the path. Connect with mentors and fellow students preparing for global opportunities."
   },
   "checklist": {
     "title": "Personal Checklist",
-    "subtitle": "Organize your study abroad tasks",
-    "addPlaceholder": "Add a new task...",
-    "addBtn": "Add",
-    "tasks": "Your Tasks",
-    "noTasks": "No tasks yet. Start planning your journey!",
-    "completed": "Completed",
-    "pending": "Pending"
+    "subtitle": "Track your preparation progress and make sure nothing is missed before you go abroad."
   },
   "contact": {
     "title": "Get in Touch",
-    "subtitle": "Have questions? Contact us for consultation",
+    "subtitle": "Book a free consultation with our team to discuss your plans for studying or working abroad.",
     "name": "Full Name",
     "email": "Email",
     "message": "Message",

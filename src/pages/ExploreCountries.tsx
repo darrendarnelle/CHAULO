@@ -63,7 +63,7 @@ export default function ExploreCountries() {
         <div style={styles.container}>
           <h1 style={styles.title}>{t('explore.title')}</h1>
           <p style={styles.subtitle}>
-            {t('explore.description')}
+            {t('explore.subtitle')}
           </p>
         </div>
       </section>

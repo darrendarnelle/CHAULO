@@ -11,12 +11,12 @@ export default function Navbar() {
   const { t, i18n } = useTranslation()
 
   const getNavLinks = () => [
-    { path: '/', label: t('nav.home') },
-    { path: '/explore', label: t('nav.explore') },
-    { path: '/dashboard', label: t('nav.dashboard') },
-    { path: '/mentorship', label: t('nav.mentorship') },
-    { path: '/checklist', label: t('nav.checklist') },
-    { path: '/contact', label: t('nav.contact') },
+    { path: '/', label: 'Home' },
+    { path: '/explore', label: 'Explore' },
+    { path: '/dashboard', label: 'Dashboard' },
+    { path: '/mentorship', label: 'Mentorship' },
+    { path: '/checklist', label: 'Checklist' },
+    { path: '/contact', label: 'Contact' },
   ]
 
   const handleLanguageChange = (lang: string) => {
