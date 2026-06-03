@@ -10,7 +10,7 @@ export default function Navbar() {
   const { user, signOut } = useAuth()
   const { t, i18n } = useTranslation()
 
-  const navLinks = [
+  const getNavLinks = () => [
     { path: '/', label: t('nav.home') },
     { path: '/explore', label: t('nav.explore') },
     { path: '/dashboard', label: t('nav.dashboard') },
@@ -23,6 +23,8 @@ export default function Navbar() {
     i18n.changeLanguage(lang)
     localStorage.setItem('language', lang)
   }
+
+  const navLinks = getNavLinks()
 
   return (
     <>
