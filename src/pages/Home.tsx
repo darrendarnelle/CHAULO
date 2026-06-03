@@ -41,22 +41,22 @@ export default function Home() {
     {
       icon: <DollarSign size={24} />,
       title: t('home.reason1'),
-      desc: t('home.reason1'),
+      desc: t('home.reason1Desc'),
     },
     {
       icon: <BookOpen size={24} />,
       title: t('home.reason2'),
-      desc: t('home.reason2'),
+      desc: t('home.reason2Desc'),
     },
     {
       icon: <ShieldCheck size={24} />,
       title: t('home.reason3'),
-      desc: t('home.reason3'),
+      desc: t('home.reason3Desc'),
     },
     {
       icon: <TrendingUp size={24} />,
       title: t('home.reason4'),
-      desc: t('home.reason4'),
+      desc: t('home.reason4Desc'),
     },
   ]
   return (

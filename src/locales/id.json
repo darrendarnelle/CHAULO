@@ -11,20 +11,24 @@
     "signOut": "Keluar"
   },
   "home": {
-    "title": "Rencanakan Perjalanan Pendidikan Global Anda",
-    "subtitle": "Bimbingan ahli untuk belajar di luar negeri",
-    "heroButton": "Jelajahi Negara",
-    "feature1Title": "Panduan Negara",
-    "feature1Desc": "Informasi rinci tentang universitas dan biaya hidup",
-    "feature2Title": "Mentorship",
-    "feature2Desc": "Terhubung dengan mentor berpengalaman yang belajar di luar negeri",
-    "feature3Title": "Alat Perencanaan",
-    "feature3Desc": "Lacak aplikasi dan buat daftar periksa yang dipersonalisasi",
+    "title": "Rencanakan Karir Pendidikan Internasional Anda",
+    "subtitle": "Bimbingan profesional untuk pendidikan lanjutan di luar negeri",
+    "heroButton": "Mulai Perjalanan Anda",
+    "feature1Title": "Panduan Negara Komprehensif",
+    "feature1Desc": "Informasi detail tentang universitas, persyaratan masuk, dan biaya hidup",
+    "feature2Title": "Program Mentorship Berpengalaman",
+    "feature2Desc": "Terhubung dengan mentor profesional yang telah berhasil menempuh pendidikan lanjutan",
+    "feature3Title": "Alat Perencanaan Strategis",
+    "feature3Desc": "Kelola aplikasi Anda dan buat daftar periksa persiapan yang disesuaikan",
     "whyChoose": "Mengapa Memilih Chaulo?",
-    "reason1": "Mentor ahli dengan pengalaman nyata di luar negeri",
-    "reason2": "Informasi komprehensif tentang negara dan universitas",
-    "reason3": "Alat perencanaan dan pelacakan interaktif",
-    "reason4": "Dukungan dan bimbingan komunitas"
+    "reason1": "Mentor Berpengalaman Internasional",
+    "reason1Desc": "Belajar dari profesional berpengalaman dalam bidang pendidikan internasional",
+    "reason2": "Sumber Daya Pendidikan Lengkap",
+    "reason2Desc": "Akses informasi detail tentang universitas dan destinasi studi di seluruh dunia",
+    "reason3": "Dukungan Perencanaan Profesional",
+    "reason3Desc": "Manfaatkan metodologi terbukti untuk mempersiapkan pendidikan internasional Anda",
+    "reason4": "Jaringan Komunitas Mendukung",
+    "reason4Desc": "Terhubung dengan sesama siswa yang mengejar peluang pendidikan internasional"
   },
   "explore": {
     "title": "Jelajahi Negara",
@@ -48,7 +52,7 @@
   },
   "checklist": {
     "title": "Daftar Periksa Pribadi",
-    "subtitle": "Atur tugas-tugas belajar di luar negeri Anda",
+    "subtitle": "Atur tugas-tugas persiapan Anda",
     "addPlaceholder": "Tambahkan tugas baru...",
     "addBtn": "Tambahkan"
   },
@@ -79,7 +83,7 @@
     "creatingAccount": "Membuat akun..."
   },
   "footer": {
-    "description": "Pintu gerbang Anda ke pendidikan global",
+    "description": "Portal menuju pendidikan global",
     "company": "Perusahaan",
     "support": "Dukungan",
     "legal": "Hukum",
