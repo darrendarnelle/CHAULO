@@ -1,4 +1,5 @@
 import { ArrowRight, BookOpen, FileText, DollarSign, Briefcase, Globe, Home } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 const modules = [
   {
@@ -52,6 +53,7 @@ const modules = [
 ]
 
 export default function LearningDashboard() {
+  const { t } = useTranslation()
   const overallProgress = Math.round(
     modules.reduce((sum, m) => sum + m.progress, 0) / modules.length
   )
@@ -63,9 +65,9 @@ export default function LearningDashboard() {
         <div style={styles.container}>
           <div style={styles.welcomeContent}>
             <div>
-              <h1 style={styles.welcomeTitle}>Welcome back. Continue your journey.</h1>
+              <h1 style={styles.welcomeTitle}>{t('dashboard.title')}</h1>
               <p style={styles.welcomeSub}>
-                You're making great progress! Keep going to reach your goal of studying or working abroad.
+                {t('dashboard.subtitle')}
               </p>
             </div>
             <div style={styles.overallCard}>

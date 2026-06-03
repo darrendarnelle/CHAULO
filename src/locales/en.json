@@ -33,7 +33,11 @@
   "explore": {
     "title": "Explore Countries",
     "description": "Discover popular study destinations around the world",
-    "visitBtn": "Learn More"
+    "visitBtn": "Learn More",
+    "country": "Country",
+    "university": "University",
+    "tuition": "Tuition",
+    "livingCost": "Living Cost"
   },
   "dashboard": {
     "title": "Learning Dashboard",
@@ -48,13 +52,20 @@
   "mentorship": {
     "title": "Mentorship & Community",
     "subtitle": "Connect with experienced mentors",
-    "connectBtn": "Connect"
+    "connectBtn": "Connect",
+    "mentors": "Available Mentors",
+    "expertise": "Expertise",
+    "contact": "Contact"
   },
   "checklist": {
     "title": "Personal Checklist",
     "subtitle": "Organize your study abroad tasks",
     "addPlaceholder": "Add a new task...",
-    "addBtn": "Add"
+    "addBtn": "Add",
+    "tasks": "Your Tasks",
+    "noTasks": "No tasks yet. Start planning your journey!",
+    "completed": "Completed",
+    "pending": "Pending"
   },
   "contact": {
     "title": "Get in Touch",

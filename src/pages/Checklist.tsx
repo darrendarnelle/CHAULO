@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Check, Circle, Plane, BookOpen, FileText, Home, DollarSign, Briefcase, CreditCard } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 const initialItems = [
   { id: 1, label: 'Passport ready', icon: <CreditCard size={18} />, checked: true },
@@ -25,14 +26,15 @@ export default function Checklist() {
   const checkedCount = items.filter((i) => i.checked).length
   const percent = Math.round((checkedCount / items.length) * 100)
 
+  const { t } = useTranslation()
+
   return (
     <div>
       <section style={styles.hero}>
         <div style={styles.container}>
-          <h1 style={styles.title}>Personal Checklist</h1>
+          <h1 style={styles.title}>{t('checklist.title')}</h1>
           <p style={styles.subtitle}>
-            Track your preparation progress and make sure nothing is missed
-            before you go abroad.
+            {t('checklist.subtitle')}
           </p>
         </div>
       </section>
@@ -43,7 +45,7 @@ export default function Checklist() {
           <div style={styles.progressCard}>
             <div style={styles.progressTop}>
               <div style={styles.progressInfo}>
-                <h2 style={styles.progressTitle}>Your Progress</h2>
+                <h2 style={styles.progressTitle}>{t('checklist.tasks')}</h2>
                 <p style={styles.progressSub}>
                   {checkedCount} of {items.length} tasks completed
                 </p>

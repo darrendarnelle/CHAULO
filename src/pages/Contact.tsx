@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { Send, CheckCircle } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 const countries = ['Australia', 'Taiwan', 'Singapore', 'Malaysia', 'Canada', 'Other']
 const goals = ['Study', 'Work', 'Both']
 
 export default function Contact() {
+  const { t } = useTranslation()
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -28,9 +30,9 @@ export default function Contact() {
       <div>
         <section style={styles.hero}>
           <div style={styles.container}>
-            <h1 style={styles.title}>Contact & Consultation</h1>
+            <h1 style={styles.title}>{t('contact.title')}</h1>
             <p style={styles.subtitle}>
-              Book a free consultation with our team to discuss your plans.
+              {t('contact.subtitle')}
             </p>
           </div>
         </section>
@@ -62,10 +64,9 @@ export default function Contact() {
     <div>
       <section style={styles.hero}>
         <div style={styles.container}>
-          <h1 style={styles.title}>Contact & Consultation</h1>
+          <h1 style={styles.title}>{t('contact.title')}</h1>
           <p style={styles.subtitle}>
-            Book a free consultation with our team to discuss your plans for
-            studying or working abroad.
+            {t('contact.subtitle')}
           </p>
         </div>
       </section>
@@ -74,7 +75,7 @@ export default function Contact() {
         <div style={styles.container}>
           <form style={styles.form} onSubmit={handleSubmit}>
             <div style={styles.formGroup}>
-              <label style={styles.label}>Name</label>
+              <label style={styles.label}>{t('contact.name')}</label>
               <input
                 style={styles.input}
                 type="text"
@@ -86,7 +87,7 @@ export default function Contact() {
             </div>
 
             <div style={styles.formGroup}>
-              <label style={styles.label}>Email</label>
+              <label style={styles.label}>{t('contact.email')}</label>
               <input
                 style={styles.input}
                 type="email"
@@ -141,7 +142,7 @@ export default function Contact() {
             </div>
 
             <div style={styles.formGroup}>
-              <label style={styles.label}>Questions</label>
+              <label style={styles.label}>{t('contact.message')}</label>
               <textarea
                 style={styles.textarea}
                 placeholder="Tell us about your goals, questions, or anything you'd like to discuss..."

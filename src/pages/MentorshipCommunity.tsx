@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Calendar, MessageCircle, Send, User } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 const mentors = [
   {
@@ -68,6 +69,7 @@ const initialPosts = [
 ]
 
 export default function MentorshipCommunity() {
+  const { t } = useTranslation()
   const [posts, setPosts] = useState(initialPosts)
   const [newPost, setNewPost] = useState('')
 
@@ -90,10 +92,9 @@ export default function MentorshipCommunity() {
       {/* Mentorship Section */}
       <section style={styles.hero}>
         <div style={styles.container}>
-          <h1 style={styles.title}>Mentorship & Community</h1>
+          <h1 style={styles.title}>{t('mentorship.title')}</h1>
           <p style={styles.subtitle}>
-            Learn from those who have walked the path. Connect with mentors and
-            fellow students preparing for global opportunities.
+            {t('mentorship.subtitle')}
           </p>
         </div>
       </section>

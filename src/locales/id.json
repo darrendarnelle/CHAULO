@@ -33,7 +33,11 @@
   "explore": {
     "title": "Jelajahi Negara",
     "description": "Temukan destinasi studi populer di seluruh dunia",
-    "visitBtn": "Pelajari Lebih Lanjut"
+    "visitBtn": "Pelajari Lebih Lanjut",
+    "country": "Negara",
+    "university": "Universitas",
+    "tuition": "Biaya Kuliah",
+    "livingCost": "Biaya Hidup"
   },
   "dashboard": {
     "title": "Dasbor Pembelajaran",
@@ -48,13 +52,20 @@
   "mentorship": {
     "title": "Mentorship & Komunitas",
     "subtitle": "Terhubung dengan mentor berpengalaman",
-    "connectBtn": "Terhubung"
+    "connectBtn": "Terhubung",
+    "mentors": "Mentor Tersedia",
+    "expertise": "Keahlian",
+    "contact": "Hubungi"
   },
   "checklist": {
     "title": "Daftar Periksa Pribadi",
     "subtitle": "Atur tugas-tugas persiapan Anda",
     "addPlaceholder": "Tambahkan tugas baru...",
-    "addBtn": "Tambahkan"
+    "addBtn": "Tambahkan",
+    "tasks": "Tugas-Tugas Anda",
+    "noTasks": "Belum ada tugas. Mulai rencanakan perjalanan Anda!",
+    "completed": "Selesai",
+    "pending": "Tertunda"
   },
   "contact": {
     "title": "Hubungi Kami",

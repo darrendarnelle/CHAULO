@@ -1,67 +1,69 @@
 import { GraduationCap, Briefcase, FileText, DollarSign, ArrowRight } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
-const countries = [
-  {
-    name: 'Australia',
-    flag: '\u{1F1E6}\u{1F1FA}',
-    desc: 'World-class universities and strong post-study work opportunities in a vibrant, multicultural environment.',
-    education: 'Top QS-ranked universities, diverse programs',
-    jobs: 'Post-study work visa up to 4 years',
-    visa: 'Student Visa (Subclass 500)',
-    cost: 'AUD 20,000 - 35,000 / year',
-    color: 'var(--primary-500)',
-  },
-  {
-    name: 'Taiwan',
-    flag: '\u{1F1F9}\u{1F1FC}',
-    desc: 'Affordable tuition, generous scholarships, and growing tech industry with opportunities for international graduates.',
-    education: 'Government scholarships available, tech-focused programs',
-    jobs: 'Evaluation foreign talent program',
-    visa: 'Student Resident Visa',
-    cost: 'TWD 150,000 - 300,000 / year',
-    color: 'var(--accent-500)',
-  },
-  {
-    name: 'Singapore',
-    flag: '\u{1F1F8}\u{1F1EC}',
-    desc: 'A global hub for finance and tech with prestigious universities and excellent career pathways.',
-    education: 'NUS, NTU - top Asian universities',
-    jobs: 'Employment Pass for skilled workers',
-    visa: 'Student Pass',
-    cost: 'SGD 25,000 - 45,000 / year',
-    color: 'var(--warning-500)',
-  },
-  {
-    name: 'Malaysia',
-    flag: '\u{1F1F2}\u{1F1FE}',
-    desc: 'Affordable living costs, English-medium programs, and a welcoming culture close to home.',
-    education: 'Branch campuses of UK/Australian universities',
-    jobs: 'Growing digital economy opportunities',
-    visa: 'Student Pass',
-    cost: 'MYR 20,000 - 40,000 / year',
-    color: 'var(--error-500)',
-  },
-  {
-    name: 'Canada',
-    flag: '\u{1F1E8}\u{1F1E6}',
-    desc: 'Immigration-friendly policies, high quality of life, and clear pathways from study to permanent residency.',
-    education: 'Globally recognized degrees, co-op programs',
-    jobs: 'Post-graduation work permit up to 3 years',
-    visa: 'Study Permit',
+export default function ExploreCountries() {
+  const { t } = useTranslation()
+
+  const countries = [
+    {
+      name: 'Australia',
+      flag: '🇦🇺',
+      desc: 'World-class universities and strong post-study work opportunities in a vibrant, multicultural environment.',
+      education: 'Top QS-ranked universities, diverse programs',
+      jobs: 'Post-study work visa up to 4 years',
+      visa: 'Student Visa (Subclass 500)',
+      cost: 'AUD 20,000 - 35,000 / year',
+      color: 'var(--primary-500)',
+    },
+    {
+      name: 'Taiwan',
+      flag: '🇹🇼',
+      desc: 'Affordable tuition, generous scholarships, and growing tech industry with opportunities for international graduates.',
+      education: 'Government scholarships available, tech-focused programs',
+      jobs: 'Evaluation foreign talent program',
+      visa: 'Student Resident Visa',
+      cost: 'TWD 150,000 - 300,000 / year',
+      color: 'var(--accent-500)',
+    },
+    {
+      name: 'Singapore',
+      flag: '🇸🇬',
+      desc: 'A global hub for finance and tech with prestigious universities and excellent career pathways.',
+      education: 'NUS, NTU - top Asian universities',
+      jobs: 'Employment Pass for skilled workers',
+      visa: 'Student Pass',
+      cost: 'SGD 25,000 - 45,000 / year',
+      color: 'var(--warning-500)',
+    },
+    {
+      name: 'Malaysia',
+      flag: '🇲🇾',
+      desc: 'Affordable living costs, English-medium programs, and a welcoming culture close to home.',
+      education: 'Branch campuses of UK/Australian universities',
+      jobs: 'Growing digital economy opportunities',
+      visa: 'Student Pass',
+      cost: 'MYR 20,000 - 40,000 / year',
+      color: 'var(--error-500)',
+    },
+    {
+      name: 'Canada',
+      flag: '🇨🇦',
+      desc: 'Immigration-friendly policies, high quality of life, and clear pathways from study to permanent residency.',
+      education: 'Globally recognized degrees, co-op programs',
+      jobs: 'Post-graduation work permit up to 3 years',
+      visa: 'Study Permit',
     cost: 'CAD 20,000 - 40,000 / year',
     color: 'var(--primary-600)',
   },
 ]
 
-export default function ExploreCountries() {
   return (
     <div>
       <section style={styles.hero}>
         <div style={styles.container}>
-          <h1 style={styles.title}>Explore Countries</h1>
+          <h1 style={styles.title}>{t('explore.title')}</h1>
           <p style={styles.subtitle}>
-            Discover study and work opportunities across the world. Each country
-            has unique pathways waiting for you.
+            {t('explore.description')}
           </p>
         </div>
       </section>
