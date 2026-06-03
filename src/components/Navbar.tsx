@@ -1,21 +1,28 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Globe, LogOut } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { useAuth } from '../context/AuthContext'
-
-const navLinks = [
-  { path: '/', label: 'Home' },
-  { path: '/explore', label: 'Explore' },
-  { path: '/dashboard', label: 'Dashboard' },
-  { path: '/mentorship', label: 'Mentorship' },
-  { path: '/checklist', label: 'Checklist' },
-  { path: '/contact', label: 'Contact' },
-]
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const location = useLocation()
   const { user, signOut } = useAuth()
+  const { t, i18n } = useTranslation()
+
+  const navLinks = [
+    { path: '/', label: t('nav.home') },
+    { path: '/explore', label: t('nav.explore') },
+    { path: '/dashboard', label: t('nav.dashboard') },
+    { path: '/mentorship', label: t('nav.mentorship') },
+    { path: '/checklist', label: t('nav.checklist') },
+    { path: '/contact', label: t('nav.contact') },
+  ]
+
+  const handleLanguageChange = (lang: string) => {
+    i18n.changeLanguage(lang)
+    localStorage.setItem('language', lang)
+  }
 
   return (
     <>
@@ -39,6 +46,20 @@ export default function Navbar() {
           </nav>
 
           <div className="chaulo-user-section">
+            <div className="chaulo-lang-switcher">
+              <button
+                onClick={() => handleLanguageChange('en')}
+                className={`chaulo-lang-btn ${i18n.language === 'en' ? 'active' : ''}`}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => handleLanguageChange('id')}
+                className={`chaulo-lang-btn ${i18n.language === 'id' ? 'active' : ''}`}
+              >
+                ID
+              </button>
+            </div>
             {user ? (
               <div className="chaulo-user-menu">
                 <span className="chaulo-user-name">{user.name}</span>
@@ -53,10 +74,10 @@ export default function Navbar() {
             ) : (
               <div className="chaulo-auth-links">
                 <Link to="/login" className="chaulo-login-link">
-                  Sign In
+                  {t('nav.signIn')}
                 </Link>
                 <Link to="/signup" className="chaulo-signup-link">
-                  Sign Up
+                  {t('nav.signUp')}
                 </Link>
               </div>
             )}
@@ -83,6 +104,20 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <div className="chaulo-mobile-lang">
+              <button
+                onClick={() => handleLanguageChange('en')}
+                className={`chaulo-mobile-lang-btn ${i18n.language === 'en' ? 'active' : ''}`}
+              >
+                English
+              </button>
+              <button
+                onClick={() => handleLanguageChange('id')}
+                className={`chaulo-mobile-lang-btn ${i18n.language === 'id' ? 'active' : ''}`}
+              >
+                Bahasa Indonesia
+              </button>
+            </div>
             {user ? (
               <div className="chaulo-mobile-user">
                 <span className="chaulo-mobile-user-name">{user.name}</span>
@@ -94,7 +129,7 @@ export default function Navbar() {
                   className="chaulo-mobile-logout"
                 >
                   <LogOut size={18} />
-                  Sign Out
+                  {t('nav.signOut')}
                 </button>
               </div>
             ) : (
@@ -104,14 +139,14 @@ export default function Navbar() {
                   className="chaulo-mobile-auth-link"
                   onClick={() => setOpen(false)}
                 >
-                  Sign In
+                  {t('nav.signIn')}
                 </Link>
                 <Link
                   to="/signup"
                   className="chaulo-mobile-auth-link primary"
                   onClick={() => setOpen(false)}
                 >
-                  Sign Up
+                  {t('nav.signUp')}
                 </Link>
               </div>
             )}
@@ -172,6 +207,30 @@ export default function Navbar() {
         .chaulo-user-section {
           display: flex;
           align-items: center;
+          gap: 16px;
+        }
+        .chaulo-lang-switcher {
+          display: flex;
+          gap: 4px;
+        }
+        .chaulo-lang-btn {
+          background: var(--neutral-100);
+          border: 1px solid var(--neutral-300);
+          color: var(--neutral-600);
+          font-size: 12px;
+          font-weight: 600;
+          padding: 6px 10px;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: all 0.15s ease;
+        }
+        .chaulo-lang-btn:hover {
+          background: var(--neutral-200);
+        }
+        .chaulo-lang-btn.active {
+          background: var(--primary-600);
+          color: white;
+          border-color: var(--primary-600);
         }
         .chaulo-user-menu {
           display: flex;
@@ -311,6 +370,33 @@ export default function Navbar() {
         }
         .chaulo-mobile-auth-link:hover {
           background: var(--primary-100);
+        }
+        .chaulo-mobile-lang {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          padding-top: 12px;
+          border-top: 1px solid var(--neutral-200);
+          margin-top: 12px;
+        }
+        .chaulo-mobile-lang-btn {
+          background: var(--neutral-100);
+          border: 1px solid var(--neutral-300);
+          color: var(--neutral-600);
+          font-size: 14px;
+          font-weight: 500;
+          padding: 10px 12px;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: all 0.15s ease;
+        }
+        .chaulo-mobile-lang-btn:hover {
+          background: var(--neutral-200);
+        }
+        .chaulo-mobile-lang-btn.active {
+          background: var(--primary-600);
+          color: white;
+          border-color: var(--primary-600);
         }
         @media (max-width: 768px) {
           .chaulo-desktop-nav { display: none; }

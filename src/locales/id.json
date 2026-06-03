@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "explore": "Jelajahi",
+    "dashboard": "Dasbor",
+    "mentorship": "Mentorship",
+    "checklist": "Daftar Periksa",
+    "contact": "Kontak",
+    "signIn": "Masuk",
+    "signUp": "Daftar",
+    "signOut": "Keluar"
+  },
+  "home": {
+    "title": "Rencanakan Perjalanan Pendidikan Global Anda",
+    "subtitle": "Bimbingan ahli untuk belajar di luar negeri",
+    "heroButton": "Jelajahi Negara",
+    "feature1Title": "Panduan Negara",
+    "feature1Desc": "Informasi rinci tentang universitas dan biaya hidup",
+    "feature2Title": "Mentorship",
+    "feature2Desc": "Terhubung dengan mentor berpengalaman yang belajar di luar negeri",
+    "feature3Title": "Alat Perencanaan",
+    "feature3Desc": "Lacak aplikasi dan buat daftar periksa yang dipersonalisasi",
+    "whyChoose": "Mengapa Memilih Chaulo?",
+    "reason1": "Mentor ahli dengan pengalaman nyata di luar negeri",
+    "reason2": "Informasi komprehensif tentang negara dan universitas",
+    "reason3": "Alat perencanaan dan pelacakan interaktif",
+    "reason4": "Dukungan dan bimbingan komunitas"
+  },
+  "explore": {
+    "title": "Jelajahi Negara",
+    "description": "Temukan destinasi studi populer di seluruh dunia",
+    "visitBtn": "Pelajari Lebih Lanjut"
+  },
+  "dashboard": {
+    "title": "Dasbor Pembelajaran",
+    "subtitle": "Lacak kemajuan persiapan Anda",
+    "english": "Bahasa Inggris",
+    "englishLevel": "Level",
+    "standardized": "Tes Standar",
+    "score": "Skor",
+    "applications": "Aplikasi",
+    "applicationStatus": "Status"
+  },
+  "mentorship": {
+    "title": "Mentorship & Komunitas",
+    "subtitle": "Terhubung dengan mentor berpengalaman",
+    "connectBtn": "Terhubung"
+  },
+  "checklist": {
+    "title": "Daftar Periksa Pribadi",
+    "subtitle": "Atur tugas-tugas belajar di luar negeri Anda",
+    "addPlaceholder": "Tambahkan tugas baru...",
+    "addBtn": "Tambahkan"
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "subtitle": "Ada pertanyaan? Hubungi kami untuk konsultasi",
+    "name": "Nama Lengkap",
+    "email": "Email",
+    "message": "Pesan",
+    "submitBtn": "Kirim Pesan"
+  },
+  "auth": {
+    "signIn": "Masuk",
+    "signUp": "Buat Akun",
+    "email": "Email",
+    "password": "Kata Sandi",
+    "confirmPassword": "Konfirmasi Kata Sandi",
+    "fullName": "Nama Lengkap",
+    "submitBtn": "Masuk",
+    "signUpBtn": "Daftar",
+    "signUpLink": "Daftar",
+    "signInLink": "Masuk",
+    "noAccount": "Belum punya akun?",
+    "hasAccount": "Sudah punya akun?",
+    "passwordMismatch": "Kata sandi tidak cocok",
+    "error": "Terjadi kesalahan",
+    "signingIn": "Sedang masuk...",
+    "creatingAccount": "Membuat akun..."
+  },
+  "footer": {
+    "description": "Pintu gerbang Anda ke pendidikan global",
+    "company": "Perusahaan",
+    "support": "Dukungan",
+    "legal": "Hukum",
+    "about": "Tentang",
+    "contact": "Kontak",
+    "blog": "Blog",
+    "careers": "Karir",
+    "privacy": "Privasi",
+    "terms": "Syarat",
+    "copyright": "Semua hak dilindungi"
+  }
+}

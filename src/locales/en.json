@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "home": "Home",
+    "explore": "Explore",
+    "dashboard": "Dashboard",
+    "mentorship": "Mentorship",
+    "checklist": "Checklist",
+    "contact": "Contact",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "signOut": "Sign Out"
+  },
+  "home": {
+    "title": "Plan Your Global Education Journey",
+    "subtitle": "Expert guidance for studying abroad",
+    "heroButton": "Explore Countries",
+    "feature1Title": "Country Guides",
+    "feature1Desc": "Detailed information about universities and living costs",
+    "feature2Title": "Mentorship",
+    "feature2Desc": "Connect with experienced mentors who studied abroad",
+    "feature3Title": "Planning Tools",
+    "feature3Desc": "Track your applications and create personalized checklists",
+    "whyChoose": "Why Choose Chaulo?",
+    "reason1": "Expert mentors with real experience abroad",
+    "reason2": "Comprehensive country and university information",
+    "reason3": "Interactive planning and tracking tools",
+    "reason4": "Community support and guidance"
+  },
+  "explore": {
+    "title": "Explore Countries",
+    "description": "Discover popular study destinations around the world",
+    "visitBtn": "Learn More"
+  },
+  "dashboard": {
+    "title": "Learning Dashboard",
+    "subtitle": "Track your preparation progress",
+    "english": "English",
+    "englishLevel": "Level",
+    "standardized": "Standardized Tests",
+    "score": "Score",
+    "applications": "Applications",
+    "applicationStatus": "Status"
+  },
+  "mentorship": {
+    "title": "Mentorship & Community",
+    "subtitle": "Connect with experienced mentors",
+    "connectBtn": "Connect"
+  },
+  "checklist": {
+    "title": "Personal Checklist",
+    "subtitle": "Organize your study abroad tasks",
+    "addPlaceholder": "Add a new task...",
+    "addBtn": "Add"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions? Contact us for consultation",
+    "name": "Full Name",
+    "email": "Email",
+    "message": "Message",
+    "submitBtn": "Send Message"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Create Account",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fullName": "Full Name",
+    "submitBtn": "Sign In",
+    "signUpBtn": "Sign Up",
+    "signUpLink": "Sign up",
+    "signInLink": "Sign in",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "passwordMismatch": "Passwords do not match",
+    "error": "An error occurred",
+    "signingIn": "Signing in...",
+    "creatingAccount": "Creating account..."
+  },
+  "footer": {
+    "description": "Your gateway to global education",
+    "company": "Company",
+    "support": "Support",
+    "legal": "Legal",
+    "about": "About",
+    "contact": "Contact",
+    "blog": "Blog",
+    "careers": "Careers",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "copyright": "All rights reserved"
+  }
+}

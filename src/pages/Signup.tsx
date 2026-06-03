@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { supabase } from '../lib/supabase'
 
 export default function Signup() {
@@ -10,13 +11,14 @@ export default function Signup() {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
+  const { t } = useTranslation()
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault()
     setError('')
 
     if (password !== confirmPassword) {
-      setError('Passwords do not match')
+      setError(t('auth.passwordMismatch'))
       return
     }
 
@@ -39,7 +41,7 @@ export default function Signup() {
         navigate('/')
       }
     } catch (err) {
-      setError('An error occurred during signup')
+      setError(t('auth.error'))
     } finally {
       setLoading(false)
     }
@@ -49,7 +51,7 @@ export default function Signup() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50 flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-md">
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">Create Account</h1>
+          <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">{t('auth.signUp')}</h1>
 
           {error && (
             <div className="mb-6 p-4 bg-red-50 border border-red-200 text-red-700 rounded-lg text-sm">
@@ -59,7 +61,7 @@ export default function Signup() {
 
           <form onSubmit={handleSignup} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">{t('auth.fullName')}</label>
               <input
                 type="text"
                 value={name}
@@ -71,7 +73,7 @@ export default function Signup() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">{t('auth.email')}</label>
               <input
                 type="email"
                 value={email}
@@ -83,7 +85,7 @@ export default function Signup() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">{t('auth.password')}</label>
               <input
                 type="password"
                 value={password}
@@ -95,7 +97,7 @@ export default function Signup() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Confirm Password</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">{t('auth.confirmPassword')}</label>
               <input
                 type="password"
                 value={confirmPassword}
@@ -111,14 +113,14 @@ export default function Signup() {
               disabled={loading}
               className="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? 'Creating account...' : 'Sign Up'}
+              {loading ? t('auth.creatingAccount') : t('auth.signUpBtn')}
             </button>
           </form>
 
           <div className="mt-6 text-center text-sm text-gray-600">
-            Already have an account?{' '}
+            {t('auth.hasAccount')}{' '}
             <Link to="/login" className="text-blue-600 hover:underline font-semibold">
-              Sign in
+              {t('auth.signInLink')}
             </Link>
           </div>
         </div>

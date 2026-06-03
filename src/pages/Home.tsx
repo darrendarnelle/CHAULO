@@ -1,71 +1,64 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import {
   BookOpen,
   PlayCircle,
   Users,
-  HeartHandshake,
   DollarSign,
-  Clock,
   ShieldCheck,
   TrendingUp,
   ArrowRight,
 } from 'lucide-react'
 
-const features = [
-  {
-    icon: <BookOpen size={28} />,
-    title: 'E-book Guides',
-    desc: 'Comprehensive digital guides covering every step of your journey abroad.',
-    color: 'var(--primary-500)',
-    bg: 'var(--primary-50)',
-  },
-  {
-    icon: <PlayCircle size={28} />,
-    title: 'Interactive Video Learning',
-    desc: 'Engaging video courses with quizzes to deepen your understanding.',
-    color: 'var(--accent-500)',
-    bg: 'var(--accent-50)',
-  },
-  {
-    icon: <Users size={28} />,
-    title: 'Mentorship',
-    desc: 'Connect with alumni and professionals who have done it before.',
-    color: 'var(--warning-500)',
-    bg: 'var(--warning-50)',
-  },
-  {
-    icon: <HeartHandshake size={28} />,
-    title: 'Community Support',
-    desc: 'Join a supportive community of fellow Indonesian students going abroad.',
-    color: 'var(--error-500)',
-    bg: 'var(--error-50)',
-  },
-]
-
-const reasons = [
-  {
-    icon: <DollarSign size={24} />,
-    title: 'Affordable compared to agencies',
-    desc: 'Get the same quality guidance at a fraction of the cost of traditional agencies.',
-  },
-  {
-    icon: <Clock size={24} />,
-    title: 'Flexible online learning',
-    desc: 'Learn at your own pace, anytime and anywhere that works for you.',
-  },
-  {
-    icon: <ShieldCheck size={24} />,
-    title: 'Trusted step-by-step guidance',
-    desc: 'Follow proven roadmaps created by people who have successfully gone abroad.',
-  },
-  {
-    icon: <TrendingUp size={24} />,
-    title: 'Confidence for international opportunities',
-    desc: 'Build the knowledge and confidence you need to seize global opportunities.',
-  },
-]
-
 export default function Home() {
+  const { t } = useTranslation()
+
+  const features = [
+    {
+      icon: <BookOpen size={28} />,
+      title: t('home.feature1Title'),
+      desc: t('home.feature1Desc'),
+      color: 'var(--primary-500)',
+      bg: 'var(--primary-50)',
+    },
+    {
+      icon: <PlayCircle size={28} />,
+      title: t('home.feature2Title'),
+      desc: t('home.feature2Desc'),
+      color: 'var(--accent-500)',
+      bg: 'var(--accent-50)',
+    },
+    {
+      icon: <Users size={28} />,
+      title: t('home.feature3Title'),
+      desc: t('home.feature3Desc'),
+      color: 'var(--warning-500)',
+      bg: 'var(--warning-50)',
+    },
+  ]
+
+  const reasons = [
+    {
+      icon: <DollarSign size={24} />,
+      title: t('home.reason1'),
+      desc: t('home.reason1'),
+    },
+    {
+      icon: <BookOpen size={24} />,
+      title: t('home.reason2'),
+      desc: t('home.reason2'),
+    },
+    {
+      icon: <ShieldCheck size={24} />,
+      title: t('home.reason3'),
+      desc: t('home.reason3'),
+    },
+    {
+      icon: <TrendingUp size={24} />,
+      title: t('home.reason4'),
+      desc: t('home.reason4'),
+    },
+  ]
   return (
     <div>
       {/* Hero */}
@@ -74,20 +67,18 @@ export default function Home() {
           <div style={styles.heroContent}>
             <span style={styles.badge}>Empowering Indonesian Youth</span>
             <h1 style={styles.heroTitle}>
-              Build Your Global Future with{' '}
+              {t('home.title')}{' '}
               <span style={styles.highlight}>Chaulo</span>
             </h1>
             <p style={styles.heroSub}>
-              Chaulo helps Indonesian youth prepare for study and work
-              opportunities abroad with structured guidance, mentorship, and
-              trusted information.
+              {t('home.subtitle')}
             </p>
             <div style={styles.heroBtns}>
               <Link to="/dashboard" style={styles.btnPrimary}>
-                Start Your Journey <ArrowRight size={18} />
+                {t('home.heroButton')} <ArrowRight size={18} />
               </Link>
               <Link to="/explore" style={styles.btnSecondary}>
-                Explore Countries
+                {t('home.heroButton')}
               </Link>
             </div>
           </div>
@@ -159,7 +150,7 @@ export default function Home() {
       <section style={styles.whySection}>
         <div style={styles.container}>
           <div style={styles.sectionHeader}>
-            <h2 style={styles.sectionTitle}>Why Choose Chaulo?</h2>
+            <h2 style={styles.sectionTitle}>{t('home.whyChoose')}</h2>
             <p style={styles.sectionSub}>
               We make going abroad accessible, affordable, and achievable for
               every Indonesian student.
