@@ -10,25 +10,28 @@ import Contact from './pages/Contact'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import { AuthProvider } from './context/AuthContext'
+import { ThemeProvider } from './context/ThemeContext'
 
 function App() {
   return (
-    <AuthProvider>
-      <Navbar />
-      <main style={{ flex: 1 }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/explore" element={<ExploreCountries />} />
-          <Route path="/dashboard" element={<LearningDashboard />} />
-          <Route path="/mentorship" element={<MentorshipCommunity />} />
-          <Route path="/checklist" element={<Checklist />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-        </Routes>
-      </main>
-      <Footer />
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <Navbar />
+        <main style={{ flex: 1 }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/explore" element={<ExploreCountries />} />
+            <Route path="/dashboard" element={<LearningDashboard />} />
+            <Route path="/mentorship" element={<MentorshipCommunity />} />
+            <Route path="/checklist" element={<Checklist />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
+        </main>
+        <Footer />
+      </AuthProvider>
+    </ThemeProvider>
   )
 }
 

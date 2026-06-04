@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, Globe, LogOut } from 'lucide-react'
+import { Menu, X, Globe, LogOut, Moon, Sun } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../context/AuthContext'
+import { useTheme } from '../context/ThemeContext'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const location = useLocation()
   const { user, signOut } = useAuth()
   const { t, i18n } = useTranslation()
+  const { theme, toggleTheme } = useTheme()
 
   const getNavLinks = () => [
     { path: '/', label: 'Home' },
@@ -48,6 +50,14 @@ export default function Navbar() {
           </nav>
 
           <div className="chaulo-user-section">
+            <button
+              onClick={toggleTheme}
+              className="chaulo-theme-btn"
+              title={theme === 'light' ? 'Dark mode' : 'Light mode'}
+              aria-label="Toggle theme"
+            >
+              {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+            </button>
             <div className="chaulo-lang-switcher">
               <button
                 onClick={() => handleLanguageChange('en')}
@@ -233,6 +243,21 @@ export default function Navbar() {
           background: var(--primary-600);
           color: white;
           border-color: var(--primary-600);
+        }
+        .chaulo-theme-btn {
+          background: transparent;
+          border: none;
+          color: var(--text-primary);
+          cursor: pointer;
+          padding: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 6px;
+          transition: all 0.15s ease;
+        }
+        .chaulo-theme-btn:hover {
+          background: var(--bg-secondary);
         }
         .chaulo-user-menu {
           display: flex;

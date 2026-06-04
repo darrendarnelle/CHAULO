@@ -50,9 +50,10 @@ export default function Footer() {
 
 const styles: Record<string, React.CSSProperties> = {
   footer: {
-    background: 'var(--neutral-900)',
-    color: 'var(--neutral-300)',
+    background: 'var(--bg-secondary)',
+    color: 'var(--text-secondary)',
     marginTop: 'auto',
+    borderTop: '1px solid var(--border-color)',
   },
   inner: {
     maxWidth: 1200,
@@ -74,12 +75,12 @@ const styles: Record<string, React.CSSProperties> = {
   logoText: {
     fontSize: 18,
     fontWeight: 700,
-    color: 'var(--white)',
+    color: 'var(--text-primary)',
   },
   tagline: {
     fontSize: 14,
     lineHeight: 1.6,
-    color: 'var(--neutral-400)',
+    color: 'var(--text-secondary)',
     maxWidth: 280,
   },
   linksGrid: {
@@ -95,23 +96,23 @@ const styles: Record<string, React.CSSProperties> = {
   linkTitle: {
     fontSize: 14,
     fontWeight: 600,
-    color: 'var(--white)',
+    color: 'var(--text-primary)',
     marginBottom: 4,
   },
   link: {
     fontSize: 14,
-    color: 'var(--neutral-400)',
+    color: 'var(--text-secondary)',
     textDecoration: 'none',
     transition: 'color 0.15s',
   },
   bottom: {
-    borderTop: '1px solid var(--neutral-700)',
+    borderTop: '1px solid var(--border-color)',
     maxWidth: 1200,
     margin: '0 auto',
     padding: '16px 24px',
   },
   copyright: {
     fontSize: 13,
-    color: 'var(--neutral-500)',
+    color: 'var(--text-secondary)',
   },
 }

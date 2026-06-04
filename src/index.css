@@ -52,15 +52,32 @@
   --radius: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+}
+
+[data-theme='dark'] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --border-color: #334155;
 }
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  color: var(--neutral-800);
-  background: var(--white);
+  color: var(--text-primary);
+  background: var(--bg-primary);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #root {
