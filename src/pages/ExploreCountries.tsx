@@ -137,12 +137,12 @@ const styles: Record<string, React.CSSProperties> = {
   title: {
     fontSize: 36,
     fontWeight: 700,
-    color: 'var(--white)',
+    color: 'var(--text-primary)',
     marginBottom: 12,
   },
   subtitle: {
     fontSize: 16,
-    color: 'var(--primary-200)',
+    color: 'var(--text-secondary)',
     maxWidth: 560,
     margin: '0 auto',
     lineHeight: 1.6,
@@ -158,8 +158,8 @@ const styles: Record<string, React.CSSProperties> = {
   card: {
     padding: 32,
     borderRadius: 'var(--radius-lg)',
-    background: 'var(--white)',
-    border: '1px solid var(--neutral-200)',
+    background: 'var(--bg-primary)',
+    border: '1px solid var(--border-color)',
     display: 'flex',
     flexDirection: 'column',
     gap: 24,
@@ -177,13 +177,13 @@ const styles: Record<string, React.CSSProperties> = {
   cardTitle: {
     fontSize: 20,
     fontWeight: 700,
-    color: 'var(--neutral-900)',
+    color: 'var(--text-primary)',
     marginBottom: 4,
   },
   cardDesc: {
     fontSize: 14,
     lineHeight: 1.6,
-    color: 'var(--neutral-500)',
+    color: 'var(--text-secondary)',
   },
   details: {
     display: 'flex',
@@ -198,13 +198,13 @@ const styles: Record<string, React.CSSProperties> = {
   detailLabel: {
     fontSize: 12,
     fontWeight: 600,
-    color: 'var(--neutral-400)',
+    color: 'var(--text-secondary)',
     textTransform: 'uppercase' as const,
     letterSpacing: 0.5,
   },
   detailValue: {
     fontSize: 14,
-    color: 'var(--neutral-700)',
+    color: 'var(--text-primary)',
     lineHeight: 1.4,
     marginTop: 2,
   },

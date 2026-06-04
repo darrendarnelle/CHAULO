@@ -50,8 +50,8 @@ export default function LearningDashboard() {
       desc: t('dashboard.module8Desc'),
       icon: <Home size={22} />,
       progress: 0,
-      color: 'var(--neutral-500)',
-      bg: 'var(--neutral-100)',
+      color: 'var(--text-secondary)',
+      bg: 'var(--bg-secondary)',
     },
   ]
 
@@ -77,7 +77,7 @@ export default function LearningDashboard() {
                   <circle
                     cx="40" cy="40" r="34"
                     fill="none"
-                    stroke="var(--neutral-200)"
+                    stroke="var(--border-color)"
                     strokeWidth="6"
                   />
                   <circle
@@ -96,7 +96,7 @@ export default function LearningDashboard() {
               </div>
               <div style={styles.overallText}>
                 <strong>Overall Progress</strong>
-                <span style={{ fontSize: 13, color: 'var(--neutral-500)' }}>
+                <span style={{ fontSize: 13, color: 'var(--text-secondary)' }}>
                   Keep it up!
                 </span>
               </div>
@@ -169,7 +169,7 @@ const styles: Record<string, React.CSSProperties> = {
   welcomeTitle: {
     fontSize: 28,
     fontWeight: 700,
-    color: 'var(--white)',
+    color: 'var(--bg-primary)',
     marginBottom: 8,
   },
   welcomeSub: {
@@ -199,13 +199,13 @@ const styles: Record<string, React.CSSProperties> = {
     position: 'absolute',
     fontSize: 16,
     fontWeight: 700,
-    color: 'var(--white)',
+    color: 'var(--bg-primary)',
   },
   overallText: {
     display: 'flex',
     flexDirection: 'column',
     gap: 2,
-    color: 'var(--white)',
+    color: 'var(--bg-primary)',
     fontSize: 15,
   },
   modulesSection: {
@@ -214,7 +214,7 @@ const styles: Record<string, React.CSSProperties> = {
   modulesTitle: {
     fontSize: 24,
     fontWeight: 700,
-    color: 'var(--neutral-900)',
+    color: 'var(--text-primary)',
     marginBottom: 32,
   },
   modulesGrid: {
@@ -225,8 +225,8 @@ const styles: Record<string, React.CSSProperties> = {
   moduleCard: {
     padding: 28,
     borderRadius: 'var(--radius-lg)',
-    background: 'var(--white)',
-    border: '1px solid var(--neutral-200)',
+    background: 'var(--bg-primary)',
+    border: '1px solid var(--border-color)',
     display: 'flex',
     flexDirection: 'column',
     gap: 20,
@@ -250,13 +250,13 @@ const styles: Record<string, React.CSSProperties> = {
   moduleTitle: {
     fontSize: 16,
     fontWeight: 600,
-    color: 'var(--neutral-900)',
+    color: 'var(--text-primary)',
     marginBottom: 4,
   },
   moduleDesc: {
     fontSize: 13,
     lineHeight: 1.5,
-    color: 'var(--neutral-500)',
+    color: 'var(--text-secondary)',
   },
   progressRow: {
     display: 'flex',
@@ -267,7 +267,7 @@ const styles: Record<string, React.CSSProperties> = {
     flex: 1,
     height: 8,
     borderRadius: 100,
-    background: 'var(--neutral-100)',
+    background: 'var(--bg-secondary)',
     overflow: 'hidden',
   },
   progressFill: {
@@ -278,7 +278,7 @@ const styles: Record<string, React.CSSProperties> = {
   progressLabel: {
     fontSize: 13,
     fontWeight: 600,
-    color: 'var(--neutral-500)',
+    color: 'var(--text-secondary)',
     minWidth: 36,
     textAlign: 'right' as const,
   },
@@ -289,7 +289,7 @@ const styles: Record<string, React.CSSProperties> = {
     padding: '10px 20px',
     borderRadius: 'var(--radius-sm)',
     background: 'var(--primary-600)',
-    color: 'var(--white)',
+    color: 'var(--bg-primary)',
     fontSize: 14,
     fontWeight: 600,
     border: 'none',

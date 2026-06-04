@@ -114,7 +114,7 @@ export default function MentorshipCommunity() {
             {mentors.map((m, i) => (
               <div key={i} style={styles.mentorCard}>
                 <div style={styles.mentorPhoto}>
-                  <User size={32} color="var(--neutral-400)" />
+                  <User size={32} color="var(--text-secondary)" />
                 </div>
                 <div style={styles.mentorBadge}>
                   <span style={{ fontSize: 14 }}>{m.country === 'Australia' ? '\u{1F1E6}\u{1F1FA}' : m.country === 'Taiwan' ? '\u{1F1F9}\u{1F1FC}' : m.country === 'Singapore' ? '\u{1F1F8}\u{1F1EC}' : m.country === 'Canada' ? '\u{1F1E8}\u{1F1E6}' : '\u{1F1F2}\u{1F1FE}'}</span>
@@ -145,7 +145,7 @@ export default function MentorshipCommunity() {
           {/* Post Input */}
           <div style={styles.postInput}>
             <div style={styles.postAvatar}>
-              <User size={20} color="var(--neutral-400)" />
+              <User size={20} color="var(--text-secondary)" />
             </div>
             <input
               style={styles.postField}
@@ -165,7 +165,7 @@ export default function MentorshipCommunity() {
               <div key={i} style={styles.postCard}>
                 <div style={styles.postHeader}>
                   <div style={styles.postAvatarSmall}>
-                    <User size={16} color="var(--neutral-400)" />
+                    <User size={16} color="var(--text-secondary)" />
                   </div>
                   <div>
                     <strong style={styles.postAuthor}>{p.author}</strong>
@@ -200,7 +200,7 @@ const styles: Record<string, React.CSSProperties> = {
   title: {
     fontSize: 36,
     fontWeight: 700,
-    color: 'var(--white)',
+    color: 'var(--bg-primary)',
     marginBottom: 12,
   },
   subtitle: {
@@ -216,12 +216,12 @@ const styles: Record<string, React.CSSProperties> = {
   sectionTitle: {
     fontSize: 24,
     fontWeight: 700,
-    color: 'var(--neutral-900)',
+    color: 'var(--text-primary)',
     marginBottom: 8,
   },
   sectionSub: {
     fontSize: 15,
-    color: 'var(--neutral-500)',
+    color: 'var(--text-secondary)',
     marginBottom: 32,
     lineHeight: 1.6,
   },
@@ -233,8 +233,8 @@ const styles: Record<string, React.CSSProperties> = {
   mentorCard: {
     padding: 28,
     borderRadius: 'var(--radius-lg)',
-    background: 'var(--white)',
-    border: '1px solid var(--neutral-200)',
+    background: 'var(--bg-primary)',
+    border: '1px solid var(--border-color)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -245,7 +245,7 @@ const styles: Record<string, React.CSSProperties> = {
     width: 72,
     height: 72,
     borderRadius: '50%',
-    background: 'var(--neutral-100)',
+    background: 'var(--bg-secondary)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -268,16 +268,16 @@ const styles: Record<string, React.CSSProperties> = {
   mentorName: {
     fontSize: 17,
     fontWeight: 700,
-    color: 'var(--neutral-900)',
+    color: 'var(--text-primary)',
   },
   mentorRole: {
     fontSize: 13,
-    color: 'var(--neutral-500)',
+    color: 'var(--text-secondary)',
     lineHeight: 1.4,
   },
   mentorIntro: {
     fontSize: 14,
-    color: 'var(--neutral-600)',
+    color: 'var(--text-secondary)',
     lineHeight: 1.5,
     marginBottom: 4,
   },
@@ -288,7 +288,7 @@ const styles: Record<string, React.CSSProperties> = {
     padding: '10px 20px',
     borderRadius: 'var(--radius-sm)',
     background: 'var(--primary-600)',
-    color: 'var(--white)',
+    color: 'var(--bg-primary)',
     fontSize: 14,
     fontWeight: 600,
     border: 'none',
@@ -298,7 +298,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   communitySection: {
     padding: '64px 24px',
-    background: 'var(--neutral-50)',
+    background: 'var(--bg-secondary)',
   },
   postInput: {
     display: 'flex',
@@ -306,15 +306,15 @@ const styles: Record<string, React.CSSProperties> = {
     alignItems: 'center',
     padding: 16,
     borderRadius: 'var(--radius-lg)',
-    background: 'var(--white)',
-    border: '1px solid var(--neutral-200)',
+    background: 'var(--bg-primary)',
+    border: '1px solid var(--border-color)',
     marginBottom: 24,
   },
   postAvatar: {
     width: 40,
     height: 40,
     borderRadius: '50%',
-    background: 'var(--neutral-100)',
+    background: 'var(--bg-secondary)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -325,7 +325,7 @@ const styles: Record<string, React.CSSProperties> = {
     border: 'none',
     outline: 'none',
     fontSize: 14,
-    color: 'var(--neutral-800)',
+    color: 'var(--text-primary)',
     background: 'transparent',
   },
   postBtn: {
@@ -333,7 +333,7 @@ const styles: Record<string, React.CSSProperties> = {
     height: 40,
     borderRadius: 'var(--radius-sm)',
     background: 'var(--primary-600)',
-    color: 'var(--white)',
+    color: 'var(--bg-primary)',
     border: 'none',
     cursor: 'pointer',
     display: 'flex',
@@ -350,8 +350,8 @@ const styles: Record<string, React.CSSProperties> = {
   postCard: {
     padding: 20,
     borderRadius: 'var(--radius-lg)',
-    background: 'var(--white)',
-    border: '1px solid var(--neutral-200)',
+    background: 'var(--bg-primary)',
+    border: '1px solid var(--border-color)',
   },
   postHeader: {
     display: 'flex',
@@ -363,7 +363,7 @@ const styles: Record<string, React.CSSProperties> = {
     width: 32,
     height: 32,
     borderRadius: '50%',
-    background: 'var(--neutral-100)',
+    background: 'var(--bg-secondary)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -371,17 +371,17 @@ const styles: Record<string, React.CSSProperties> = {
   postAuthor: {
     fontSize: 14,
     fontWeight: 600,
-    color: 'var(--neutral-900)',
+    color: 'var(--text-primary)',
     marginRight: 8,
   },
   postTime: {
     fontSize: 12,
-    color: 'var(--neutral-400)',
+    color: 'var(--text-secondary)',
   },
   postText: {
     fontSize: 14,
     lineHeight: 1.6,
-    color: 'var(--neutral-700)',
+    color: 'var(--text-primary)',
     marginBottom: 12,
   },
   postActions: {
@@ -394,8 +394,8 @@ const styles: Record<string, React.CSSProperties> = {
     gap: 6,
     padding: '6px 12px',
     borderRadius: 'var(--radius-sm)',
-    background: 'var(--neutral-50)',
-    color: 'var(--neutral-500)',
+    background: 'var(--bg-secondary)',
+    color: 'var(--text-secondary)',
     fontSize: 13,
     fontWeight: 500,
     border: 'none',

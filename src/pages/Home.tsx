@@ -97,7 +97,7 @@ export default function Home() {
                 <GradIcon />
                 <div style={styles.heroCardText}>
                   <strong>1000+ Students</strong>
-                  <span style={{ fontSize: 13, color: 'var(--neutral-500)' }}>
+                  <span style={{ fontSize: 13, color: 'var(--text-secondary)' }}>
                     Already preparing abroad
                   </span>
                 </div>
@@ -106,7 +106,7 @@ export default function Home() {
                 <MentorIcon />
                 <div style={styles.heroCardText}>
                   <strong>50+ Mentors</strong>
-                  <span style={{ fontSize: 13, color: 'var(--neutral-500)' }}>
+                  <span style={{ fontSize: 13, color: 'var(--text-secondary)' }}>
                     Alumni & professionals
                   </span>
                 </div>
@@ -211,7 +211,7 @@ function MentorIcon() {
 
 const styles: Record<string, React.CSSProperties> = {
   hero: {
-    background: 'linear-gradient(135deg, var(--primary-50) 0%, var(--white) 50%, var(--primary-50) 100%)',
+    background: 'linear-gradient(135deg, var(--primary-50) 0%, var(--bg-primary) 50%, var(--primary-50) 100%)',
     padding: '80px 24px',
   },
   heroInner: {
@@ -239,7 +239,7 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: 48,
     fontWeight: 700,
     lineHeight: 1.15,
-    color: 'var(--neutral-900)',
+    color: 'var(--text-primary)',
     marginBottom: 20,
     letterSpacing: -1,
   },
@@ -249,7 +249,7 @@ const styles: Record<string, React.CSSProperties> = {
   heroSub: {
     fontSize: 18,
     lineHeight: 1.6,
-    color: 'var(--neutral-500)',
+    color: 'var(--text-secondary)',
     marginBottom: 32,
     maxWidth: 520,
   },
@@ -278,12 +278,12 @@ const styles: Record<string, React.CSSProperties> = {
     gap: 8,
     padding: '14px 28px',
     borderRadius: 'var(--radius)',
-    background: 'var(--white)',
+    background: 'var(--bg-secondary)',
     color: 'var(--primary-700)',
     fontSize: 15,
     fontWeight: 600,
     textDecoration: 'none',
-    border: '1.5px solid var(--primary-200)',
+    border: '1.5px solid var(--border-color)',
     transition: 'border-color 0.15s',
   },
   heroVisual: {
@@ -294,9 +294,10 @@ const styles: Record<string, React.CSSProperties> = {
     flexDirection: 'column',
     gap: 16,
     padding: 32,
-    background: 'var(--white)',
+    background: 'var(--bg-primary)',
     borderRadius: 'var(--radius-lg)',
     boxShadow: 'var(--shadow-lg)',
+    border: '1px solid var(--border-color)',
   },
   heroCardInner: {
     display: 'flex',
@@ -304,7 +305,7 @@ const styles: Record<string, React.CSSProperties> = {
     gap: 16,
     padding: 16,
     borderRadius: 'var(--radius)',
-    background: 'var(--neutral-50)',
+    background: 'var(--bg-secondary)',
   },
   heroCardText: {
     display: 'flex',
@@ -334,13 +335,13 @@ const styles: Record<string, React.CSSProperties> = {
   sectionTitle: {
     fontSize: 32,
     fontWeight: 700,
-    color: 'var(--neutral-900)',
+    color: 'var(--text-primary)',
     marginBottom: 12,
     letterSpacing: -0.5,
   },
   sectionSub: {
     fontSize: 16,
-    color: 'var(--neutral-500)',
+    color: 'var(--text-secondary)',
     maxWidth: 560,
     margin: '0 auto',
     lineHeight: 1.6,
@@ -353,8 +354,8 @@ const styles: Record<string, React.CSSProperties> = {
   featureCard: {
     padding: 32,
     borderRadius: 'var(--radius-lg)',
-    background: 'var(--white)',
-    border: '1px solid var(--neutral-200)',
+    background: 'var(--bg-primary)',
+    border: '1px solid var(--border-color)',
     transition: 'box-shadow 0.2s, transform 0.2s',
   },
   featureIcon: {
@@ -369,17 +370,17 @@ const styles: Record<string, React.CSSProperties> = {
   featureTitle: {
     fontSize: 18,
     fontWeight: 600,
-    color: 'var(--neutral-900)',
+    color: 'var(--text-primary)',
     marginBottom: 8,
   },
   featureDesc: {
     fontSize: 14,
     lineHeight: 1.6,
-    color: 'var(--neutral-500)',
+    color: 'var(--text-secondary)',
   },
   whySection: {
     padding: '80px 24px',
-    background: 'var(--neutral-50)',
+    background: 'var(--bg-secondary)',
   },
   whyGrid: {
     display: 'grid',
@@ -391,8 +392,8 @@ const styles: Record<string, React.CSSProperties> = {
     gap: 16,
     padding: 28,
     borderRadius: 'var(--radius-lg)',
-    background: 'var(--white)',
-    border: '1px solid var(--neutral-200)',
+    background: 'var(--bg-primary)',
+    border: '1px solid var(--border-color)',
   },
   whyIcon: {
     width: 44,
@@ -408,13 +409,13 @@ const styles: Record<string, React.CSSProperties> = {
   whyTitle: {
     fontSize: 16,
     fontWeight: 600,
-    color: 'var(--neutral-900)',
+    color: 'var(--text-primary)',
     marginBottom: 4,
   },
   whyDesc: {
     fontSize: 14,
     lineHeight: 1.6,
-    color: 'var(--neutral-500)',
+    color: 'var(--text-secondary)',
   },
   ctaSection: {
     padding: '80px 24px',

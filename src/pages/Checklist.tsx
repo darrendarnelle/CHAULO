@@ -55,7 +55,7 @@ export default function Checklist() {
                   <circle
                     cx="50" cy="50" r="42"
                     fill="none"
-                    stroke="var(--neutral-200)"
+                    stroke="var(--border-color)"
                     strokeWidth="8"
                   />
                   <circle
@@ -108,15 +108,15 @@ export default function Checklist() {
                   }}
                 >
                   {item.checked ? (
-                    <Check size={14} color="var(--white)" strokeWidth={3} />
+                    <Check size={14} color="var(--bg-primary)" strokeWidth={3} />
                   ) : (
-                    <Circle size={14} color="var(--neutral-300)" />
+                    <Circle size={14} color="var(--border-color)" />
                   )}
                 </div>
                 <span
                   style={{
                     ...styles.checkIcon,
-                    color: item.checked ? 'var(--neutral-400)' : 'var(--primary-500)',
+                    color: item.checked ? 'var(--text-secondary)' : 'var(--primary-500)',
                   }}
                 >
                   {item.icon}
@@ -151,7 +151,7 @@ const styles: Record<string, React.CSSProperties> = {
   title: {
     fontSize: 36,
     fontWeight: 700,
-    color: 'var(--white)',
+    color: 'var(--bg-primary)',
     marginBottom: 12,
   },
   subtitle: {
@@ -165,8 +165,8 @@ const styles: Record<string, React.CSSProperties> = {
   progressCard: {
     padding: 32,
     borderRadius: 'var(--radius-lg)',
-    background: 'var(--white)',
-    border: '1px solid var(--neutral-200)',
+    background: 'var(--bg-primary)',
+    border: '1px solid var(--border-color)',
     marginBottom: 32,
   },
   progressTop: {
@@ -181,12 +181,12 @@ const styles: Record<string, React.CSSProperties> = {
   progressTitle: {
     fontSize: 20,
     fontWeight: 700,
-    color: 'var(--neutral-900)',
+    color: 'var(--text-primary)',
     marginBottom: 4,
   },
   progressSub: {
     fontSize: 14,
-    color: 'var(--neutral-500)',
+    color: 'var(--text-secondary)',
   },
   progressCircle: {
     position: 'relative',
@@ -205,7 +205,7 @@ const styles: Record<string, React.CSSProperties> = {
   progressBar: {
     height: 10,
     borderRadius: 100,
-    background: 'var(--neutral-100)',
+    background: 'var(--bg-secondary)',
     overflow: 'hidden',
     marginBottom: 12,
   },
@@ -231,22 +231,22 @@ const styles: Record<string, React.CSSProperties> = {
     gap: 14,
     padding: '16px 20px',
     borderRadius: 'var(--radius)',
-    background: 'var(--white)',
-    border: '1px solid var(--neutral-200)',
+    background: 'var(--bg-primary)',
+    border: '1px solid var(--border-color)',
     cursor: 'pointer',
     textAlign: 'left' as const,
     transition: 'all 0.15s',
     width: '100%',
   },
   checkItemDone: {
-    background: 'var(--neutral-50)',
-    borderColor: 'var(--neutral-100)',
+    background: 'var(--bg-secondary)',
+    borderColor: 'var(--bg-secondary)',
   },
   checkBox: {
     width: 28,
     height: 28,
     borderRadius: 8,
-    border: '2px solid var(--neutral-300)',
+    border: '2px solid var(--border-color)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -265,11 +265,11 @@ const styles: Record<string, React.CSSProperties> = {
   checkLabel: {
     fontSize: 15,
     fontWeight: 500,
-    color: 'var(--neutral-800)',
+    color: 'var(--text-primary)',
     transition: 'all 0.15s',
   },
   checkLabelDone: {
     textDecoration: 'line-through',
-    color: 'var(--neutral-400)',
+    color: 'var(--text-secondary)',
   },
 }
